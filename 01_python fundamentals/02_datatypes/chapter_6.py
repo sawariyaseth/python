@@ -3,14 +3,20 @@ customer_name = "Priya"
 
 print(f"Order for {customer_name} : {chai_type} please !")
 
-chai_description = "Aromatic and Bold"
-print(f"First word: {chai_description[:8]}")
-print(f"Last word: {chai_description[12:]}")
-print(f"Last word: {chai_description[::-1]}")
+chai_description = "Aromatic_and_Bold"
+# String formatting with f-strings
+# String slicing:
+print(f"first word: {chai_description[:8]}")
+print(f"last word: {chai_description[13:]}")
+print(f"reversed word: {chai_description[::-1]}")
+# [:8] - first 8 characters
+# [12:] - from index 12 to end
+# [::-1] - reverses the string
 
 label_text = "Chai Spécial"
-ecoded_label = label_text.encode("utf-8")
-print(f"Non Encoded label: {label_text}")
-print(f"Encoded label: {ecoded_label}")
-decoded_label = ecoded_label.decode("utf-8")
+encoded_label= label_text.encode("utf-8")
+print(f"Encoded label: {encoded_label}")
+decoded_label = encoded_label.decode("utf-8")
 print(f"Decoded label: {decoded_label}")
+# encode("utf-8") converts the string to bytes (notice the é becomes \xc3\xa9)
+# decode("utf-8") converts bytes back to string
